@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Номер" id="5">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="7"/>
+						</InputField>
+						<InputField name="Проект" id="11">
+							<DataPath>Объект.Проект</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПроектКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="13"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="Дата" id="8">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+						</InputField>
+						<InputField name="ОтчетныйПериод" id="22">
+							<DataPath>Объект.ОтчетныйПериод</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтчетныйПериодКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ОтчетныйПериодРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Задачи" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Задачи</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗадачиКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ЗадачиКоманднаяПанель" id="30">
+				<ChildItems>
+					<Button name="ЗадачиЗаполнитьАвто" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьАвто</CommandName>
+						<ExtendedTooltip name="ЗадачиЗаполнитьАвтоРасширеннаяПодсказка" id="51"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ЗадачиСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ЗадачиСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗадачиСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗадачиУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ЗадачиУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЗадачиНомерСтроки" id="41">
+					<DataPath>Объект.Задачи.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЗадачиНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<InputField name="ЗадачиЗадача" id="44">
+					<DataPath>Объект.Задачи.Задача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиЗадачаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ЗадачиЗадачаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ЗадачиНаименование" id="52">
+					<DataPath>Объект.Задачи.Задача.НаименованиеЗадачи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ЗадачиСумма" id="47">
+					<DataPath>Объект.Задачи.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиСуммаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЗадачиСуммаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="25">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="27"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Акт</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьАвто" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить авто</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьАвто</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ВидОперацииДС" id="7">
+			<DataPath>Объект.ВидОперацииДС</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидОперацииДСКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидОперацииДСРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ДокОснование" id="10">
+			<DataPath>Объект.ДокОснование</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДокОснованиеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДокОснованиеРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Проект" id="13">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Контакт" id="16">
+			<DataPath>Объект.Контакт</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтактКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КонтактРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ОтчетныйПериод" id="19">
+			<DataPath>Объект.ОтчетныйПериод</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОтчетныйПериодКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОтчетныйПериодРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Сумма" id="22">
+			<DataPath>Объект.Сумма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СуммаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<Table name="Задачи" id="25">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Задачи</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗадачиКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="ЗадачиКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="ЗадачиСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ЗадачиСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗадачиСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗадачиУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>Задачи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗадачиУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ЗадачиУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЗадачиНомерСтроки" id="38">
+					<DataPath>Объект.Задачи.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗадачиНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="ЗадачиЗадача" id="41">
+					<DataPath>Объект.Задачи.Задача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиЗадачаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЗадачиЗадачаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ЗадачиНаименование" id="47">
+					<DataPath>Объект.Задачи.Задача.НаименованиеЗадачи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ЗадачиСумма" id="44">
+					<DataPath>Объект.Задачи.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗадачиСуммаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ЗадачиСуммаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УчетДенег</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

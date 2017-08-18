@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Название проекта</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="4">
+			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входит в группу</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаОписание" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<CommandBar name="КомПанель" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ком панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ком панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CommandSource>Item.врОписание</CommandSource>
+					<ExtendedTooltip name="КомПанельРасширеннаяПодсказка" id="33"/>
+				</CommandBar>
+				<FormattedDocumentField name="врОписание" id="29">
+					<DataPath>врОписание</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="врОписаниеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="врОписаниеРасширеннаяПодсказка" id="31"/>
+				</FormattedDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Контакты" id="10">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<HeightInTableRows>3</HeightInTableRows>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Контакты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты по проекту</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтактыКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="КонтактыКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="КонтактыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="КонтактыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="КонтактыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтактыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="КонтактыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтактыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="КонтактыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="КонтактыКонтакт" id="23">
+					<DataPath>Объект.Контакты.Контакт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактыКонтактКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КонтактыКонтактРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="КонтактыТел" id="26">
+					<DataPath>Объект.Контакты.Контакт.ТелефонМобильный</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактыТелКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КонтактыТелРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Проекты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="врОписание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вр описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

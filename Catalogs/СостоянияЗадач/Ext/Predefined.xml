@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.4">
+	<Item id="3c6ae661-a3ee-4992-8462-51dba5a41074">
+		<Name>Выполняется</Name>
+		<Code xsi:type="xs:decimal">3</Code>
+		<Description>Выполняется</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0cc60dd8-e20e-471a-beea-abd1792bb65e">
+		<Name>Завершена</Name>
+		<Code xsi:type="xs:decimal">5</Code>
+		<Description>Завершена</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="74ea83e0-7ec9-45a7-a10d-e53f9c467d6d">
+		<Name>НаКонтроле</Name>
+		<Code xsi:type="xs:decimal">4</Code>
+		<Description>На контроле</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="dd95ebf2-fcd6-4675-92a4-8f7841e7b400">
+		<Name>НаПланировании</Name>
+		<Code xsi:type="xs:decimal">2</Code>
+		<Description>На планировании</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="089c7187-43a7-4439-a4df-71f450b368b4">
+		<Name>Приостановлена</Name>
+		<Code xsi:type="xs:decimal">0</Code>
+		<Description>Приостановлена</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c1e570ef-8df9-4c06-bca1-19875e150946">
+		<Name>Создана</Name>
+		<Code xsi:type="xs:decimal">1</Code>
+		<Description>Создана</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

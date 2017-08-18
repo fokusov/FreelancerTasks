@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовки" id="86">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заголовки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовкиРасширеннаяПодсказка" id="87"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияС" id="100">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создана</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияСКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ДекорацияСРасширеннаяПодсказка" id="102"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияП" id="97">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На планировании</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияПКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ДекорацияПРасширеннаяПодсказка" id="99"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияВ" id="94">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняется</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияВКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ДекорацияВРасширеннаяПодсказка" id="96"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияК" id="91">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На контроле</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияККонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ДекорацияКРасширеннаяПодсказка" id="93"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЗ" id="88">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершена</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="ДекорацияЗКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ДекорацияЗРасширеннаяПодсказка" id="90"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСпискиРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Table name="Создана" id="6">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Создана</DataPath>
+					<RowPictureDataPath>Создана.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создана</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СозданаКонтекстноеМеню" id="7"/>
+					<AutoCommandBar name="СозданаКоманднаяПанель" id="8">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СозданаРасширеннаяПодсказка" id="9"/>
+					<SearchStringAddition name="СозданаСтрокаПоиска" id="10">
+						<AdditionSource>
+							<Item>Создана</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СозданаСтрокаПоискаКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="СозданаСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СозданаСостояниеПросмотра" id="13">
+						<AdditionSource>
+							<Item>Создана</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СозданаСостояниеПросмотраКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="СозданаСостояниеПросмотраРасширеннаяПодсказка" id="15"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СозданаУправлениеПоиском" id="16">
+						<AdditionSource>
+							<Item>Создана</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СозданаУправлениеПоискомКонтекстноеМеню" id="17"/>
+						<ExtendedTooltip name="СозданаУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СозданаПроверкаПеретаскивания</Event>
+						<Event name="Drag">СозданаПеретаскивание</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СозданаЗначение" id="19">
+							<DataPath>Создана.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СозданаЗначениеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СозданаЗначениеРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="НаПланировании" id="22">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>НаПланировании</DataPath>
+					<RowPictureDataPath>НаПланировании.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На планировании</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаПланированииКонтекстноеМеню" id="23"/>
+					<AutoCommandBar name="НаПланированииКоманднаяПанель" id="24">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НаПланированииРасширеннаяПодсказка" id="25"/>
+					<SearchStringAddition name="НаПланированииСтрокаПоиска" id="26">
+						<AdditionSource>
+							<Item>НаПланировании</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НаПланированииСтрокаПоискаКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="НаПланированииСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НаПланированииСостояниеПросмотра" id="29">
+						<AdditionSource>
+							<Item>НаПланировании</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НаПланированииСостояниеПросмотраКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="НаПланированииСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НаПланированииУправлениеПоиском" id="32">
+						<AdditionSource>
+							<Item>НаПланировании</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НаПланированииУправлениеПоискомКонтекстноеМеню" id="33"/>
+						<ExtendedTooltip name="НаПланированииУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СозданаПроверкаПеретаскивания</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="НаПланированииЗначение" id="35">
+							<DataPath>НаПланировании.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаПланированииЗначениеКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="НаПланированииЗначениеРасширеннаяПодсказка" id="37"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="Выполняется" id="38">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Выполняется</DataPath>
+					<RowPictureDataPath>Выполняется.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполняется</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВыполняетсяКонтекстноеМеню" id="39"/>
+					<AutoCommandBar name="ВыполняетсяКоманднаяПанель" id="40">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ВыполняетсяРасширеннаяПодсказка" id="41"/>
+					<SearchStringAddition name="ВыполняетсяСтрокаПоиска" id="42">
+						<AdditionSource>
+							<Item>Выполняется</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыполняетсяСтрокаПоискаКонтекстноеМеню" id="43"/>
+						<ExtendedTooltip name="ВыполняетсяСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВыполняетсяСостояниеПросмотра" id="45">
+						<AdditionSource>
+							<Item>Выполняется</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыполняетсяСостояниеПросмотраКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="ВыполняетсяСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВыполняетсяУправлениеПоиском" id="48">
+						<AdditionSource>
+							<Item>Выполняется</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВыполняетсяУправлениеПоискомКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="ВыполняетсяУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СозданаПроверкаПеретаскивания</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ВыполняетсяЗначение" id="51">
+							<DataPath>Выполняется.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВыполняетсяЗначениеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ВыполняетсяЗначениеРасширеннаяПодсказка" id="53"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="НаКонтроле" id="54">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>НаКонтроле</DataPath>
+					<RowPictureDataPath>НаКонтроле.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На контроле</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаКонтролеКонтекстноеМеню" id="55"/>
+					<AutoCommandBar name="НаКонтролеКоманднаяПанель" id="56">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НаКонтролеРасширеннаяПодсказка" id="57"/>
+					<SearchStringAddition name="НаКонтролеСтрокаПоиска" id="58">
+						<AdditionSource>
+							<Item>НаКонтроле</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НаКонтролеСтрокаПоискаКонтекстноеМеню" id="59"/>
+						<ExtendedTooltip name="НаКонтролеСтрокаПоискаРасширеннаяПодсказка" id="60"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НаКонтролеСостояниеПросмотра" id="61">
+						<AdditionSource>
+							<Item>НаКонтроле</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НаКонтролеСостояниеПросмотраКонтекстноеМеню" id="62"/>
+						<ExtendedTooltip name="НаКонтролеСостояниеПросмотраРасширеннаяПодсказка" id="63"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НаКонтролеУправлениеПоиском" id="64">
+						<AdditionSource>
+							<Item>НаКонтроле</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НаКонтролеУправлениеПоискомКонтекстноеМеню" id="65"/>
+						<ExtendedTooltip name="НаКонтролеУправлениеПоискомРасширеннаяПодсказка" id="66"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СозданаПроверкаПеретаскивания</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="НаКонтролеЗначение" id="67">
+							<DataPath>НаКонтроле.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаКонтролеЗначениеКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="НаКонтролеЗначениеРасширеннаяПодсказка" id="69"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="Завершена" id="70">
+					<Representation>List</Representation>
+					<TitleLocation>Top</TitleLocation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Завершена</DataPath>
+					<RowPictureDataPath>Завершена.Picture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершена</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗавершенаКонтекстноеМеню" id="71"/>
+					<AutoCommandBar name="ЗавершенаКоманднаяПанель" id="72">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЗавершенаРасширеннаяПодсказка" id="73"/>
+					<SearchStringAddition name="ЗавершенаСтрокаПоиска" id="74">
+						<AdditionSource>
+							<Item>Завершена</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗавершенаСтрокаПоискаКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="ЗавершенаСтрокаПоискаРасширеннаяПодсказка" id="76"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЗавершенаСостояниеПросмотра" id="77">
+						<AdditionSource>
+							<Item>Завершена</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗавершенаСостояниеПросмотраКонтекстноеМеню" id="78"/>
+						<ExtendedTooltip name="ЗавершенаСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЗавершенаУправлениеПоиском" id="80">
+						<AdditionSource>
+							<Item>Завершена</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЗавершенаУправлениеПоискомКонтекстноеМеню" id="81"/>
+						<ExtendedTooltip name="ЗавершенаУправлениеПоискомРасширеннаяПодсказка" id="82"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="DragCheck">СозданаПроверкаПеретаскивания</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ЗавершенаЗначение" id="83">
+							<DataPath>Завершена.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЗавершенаЗначениеКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ЗавершенаЗначениеРасширеннаяПодсказка" id="85"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Проект" id="1">
+			<DataPath>Объект.Проект</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фильтр по проекту</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="3"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Канбан</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Создана" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создана</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаПланировании" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На планировании</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Выполняется" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаКонтроле" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На контроле</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Завершена" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
