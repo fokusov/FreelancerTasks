@@ -29,15 +29,17 @@
 		</Metadata>
 		<Metadata name="Catalog.Пользователи" id="23e27cc8-a394-4861-9471-aee8fdca9fdc" configVersion="4ff0463a4620b6489f0e6cbee309b7fb00000000"/>
 		<Metadata name="Catalog.Пользователи.Predefined" id="23e27cc8-a394-4861-9471-aee8fdca9fdc.1c" configVersion="a9b4cbc16cc757469d07554463da340100000000"/>
-		<Metadata name="Catalog.Проекты" id="09c0e838-d6c8-4226-82f3-97943e8b8e88" configVersion="25950bc81c0ab748bd7ef84ba226b02200000000">
+		<Metadata name="Catalog.Проекты" id="09c0e838-d6c8-4226-82f3-97943e8b8e88" configVersion="2edc89cf5172c34ca56bd250542047a500000000">
 			<Metadata name="Catalog.Проекты.TabularSection.Контакты.Attribute.Контакт" id="2090aec9-4797-4b6e-a86e-f176ff962595"/>
+			<Metadata name="Catalog.Проекты.Attribute.РазмерАбонплаты" id="3dd2f21e-534f-422d-9271-e47277763f17"/>
 			<Metadata name="Catalog.Проекты.Attribute.Описание" id="640f262c-7567-4dd3-bad3-92def8351604"/>
+			<Metadata name="Catalog.Проекты.Attribute.СтавкаЧас" id="b3b1ccf2-2fe4-4b2f-97b8-45a076cd6981"/>
 			<Metadata name="Catalog.Проекты.TabularSection.Контакты" id="ed980b9c-9efe-49f6-80c5-12fde922e6bf"/>
 		</Metadata>
-		<Metadata name="Catalog.Проекты.Form.ФормаСписка" id="d5519951-3168-4cd8-8e49-33bbac6d1620" configVersion="96fe2a66102a2f4facaed264d31f4b0b00000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаСписка.Form" id="d5519951-3168-4cd8-8e49-33bbac6d1620.0" configVersion="6f87408bcbd7f14b8e97a1ded61012d200000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента" id="c75a9964-8b95-4f78-b1eb-ffa67f14bbf8" configVersion="b0834dba68d04b49982a3f1e934b9e7300000000"/>
-		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента.Form" id="c75a9964-8b95-4f78-b1eb-ffa67f14bbf8.0" configVersion="f5fb50c9fb65ca479f1d0e4b35e3ac4d00000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСписка" id="d5519951-3168-4cd8-8e49-33bbac6d1620" configVersion="87d4de1685fd5b4fb3fd40e02344354700000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаСписка.Form" id="d5519951-3168-4cd8-8e49-33bbac6d1620.0" configVersion="cd990ad36574ea4a88ebc3c180d815b600000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента" id="c75a9964-8b95-4f78-b1eb-ffa67f14bbf8" configVersion="8922fde169e9fc4bab4476d84535084600000000"/>
+		<Metadata name="Catalog.Проекты.Form.ФормаЭлемента.Form" id="c75a9964-8b95-4f78-b1eb-ffa67f14bbf8.0" configVersion="faa3256ec8fb76418e29d62618443e7900000000"/>
 		<Metadata name="Catalog.СостоянияЗадач" id="c5fa7372-859c-4ba7-80aa-47a84d7dd9e0" configVersion="9576f509ad199c4a91ec9356b822e91800000000">
 			<Metadata name="Catalog.СостоянияЗадач.Attribute.Комментарий" id="54a24b2c-adb9-4868-8fb4-13d310162494"/>
 		</Metadata>
@@ -136,8 +138,8 @@
 			<Metadata name="Document.Задача.Attribute.Заказчик" id="f0416e33-f005-4698-85d8-cda4fb27dbaa"/>
 			<Metadata name="Document.Задача.Attribute.ОтчетныйПериод" id="f754ba60-91f8-4eab-8bba-ecd3b869151f"/>
 		</Metadata>
-		<Metadata name="Document.Задача.Form.ФормаДокумента" id="db026cc1-86a9-4d49-911a-0b6ba56fe1d3" configVersion="4ad4236e94f92e42b918106bc243ea7600000000"/>
-		<Metadata name="Document.Задача.Form.ФормаДокумента.Form" id="db026cc1-86a9-4d49-911a-0b6ba56fe1d3.0" configVersion="526551477a134b44915e1e276661a1fa00000000"/>
+		<Metadata name="Document.Задача.Form.ФормаДокумента" id="db026cc1-86a9-4d49-911a-0b6ba56fe1d3" configVersion="c20de825d6c9dc4998d1fe5ca2068cf700000000"/>
+		<Metadata name="Document.Задача.Form.ФормаДокумента.Form" id="db026cc1-86a9-4d49-911a-0b6ba56fe1d3.0" configVersion="4c33c1f8fdc01c4bac92accdfbee04b800000000"/>
 		<Metadata name="Document.Задача.Form.ФормаСписка" id="7041f133-d405-4a15-9e29-c9bd0a3c173e" configVersion="8f84312fad65f246b2a077c65a92c19600000000"/>
 		<Metadata name="Document.Задача.Form.ФормаСписка.Form" id="7041f133-d405-4a15-9e29-c9bd0a3c173e.0" configVersion="7b5baf27fdf74e45952952aad3e676a700000000"/>
 		<Metadata name="Document.УчетДенег" id="36b5ef5f-fc7d-4e76-829d-f5a3bb5cd938" configVersion="b83e81f2d633544794aed41429743e0800000000">

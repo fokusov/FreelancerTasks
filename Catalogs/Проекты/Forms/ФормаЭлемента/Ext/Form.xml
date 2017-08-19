@@ -70,68 +70,130 @@
 				<FormattedDocumentField name="врОписание" id="29">
 					<DataPath>врОписание</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<Height>5</Height>
 					<ContextMenu name="врОписаниеКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="врОписаниеРасширеннаяПодсказка" id="31"/>
 				</FormattedDocumentField>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="Контакты" id="10">
-			<Representation>List</Representation>
-			<TitleLocation>Top</TitleLocation>
-			<HeightInTableRows>3</HeightInTableRows>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Контакты</DataPath>
+		<Pages name="Группа1" id="36">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Контакты по проекту</v8:content>
+					<v8:content>Группа1</v8:content>
 				</v8:item>
 			</Title>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="КонтактыКонтекстноеМеню" id="11"/>
-			<AutoCommandBar name="КонтактыКоманднаяПанель" id="12"/>
-			<ExtendedTooltip name="КонтактыРасширеннаяПодсказка" id="13"/>
-			<SearchStringAddition name="КонтактыСтрокаПоиска" id="14">
-				<AdditionSource>
-					<Item>Контакты</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КонтактыСтрокаПоискаКонтекстноеМеню" id="15"/>
-				<ExtendedTooltip name="КонтактыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="КонтактыСостояниеПросмотра" id="17">
-				<AdditionSource>
-					<Item>Контакты</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КонтактыСостояниеПросмотраКонтекстноеМеню" id="18"/>
-				<ExtendedTooltip name="КонтактыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="КонтактыУправлениеПоиском" id="20">
-				<AdditionSource>
-					<Item>Контакты</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="КонтактыУправлениеПоискомКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="КонтактыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
-			</SearchControlAddition>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="37"/>
 			<ChildItems>
-				<InputField name="КонтактыКонтакт" id="23">
-					<DataPath>Объект.Контакты.Контакт</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КонтактыКонтактКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="КонтактыКонтактРасширеннаяПодсказка" id="25"/>
-				</InputField>
-				<InputField name="КонтактыТел" id="26">
-					<DataPath>Объект.Контакты.Контакт.ТелефонМобильный</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КонтактыТелКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="КонтактыТелРасширеннаяПодсказка" id="28"/>
-				</InputField>
+				<Page name="ГруппаКонтакты" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контакты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контакты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКонтактыРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="Контакты" id="10">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<HeightInTableRows>3</HeightInTableRows>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Контакты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контакты по проекту</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КонтактыКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="КонтактыКоманднаяПанель" id="12"/>
+							<ExtendedTooltip name="КонтактыРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="КонтактыСтрокаПоиска" id="14">
+								<AdditionSource>
+									<Item>Контакты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактыСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="КонтактыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтактыСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>Контакты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="КонтактыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтактыУправлениеПоиском" id="20">
+								<AdditionSource>
+									<Item>Контакты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактыУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="КонтактыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КонтактыКонтакт" id="23">
+									<DataPath>Объект.Контакты.Контакт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактыКонтактКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="КонтактыКонтактРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="КонтактыТел" id="26">
+									<DataPath>Объект.Контакты.Контакт.ТелефонМобильный</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактыТелКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="КонтактыТелРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПрочее" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<InputField name="СтавкаЧас" id="42">
+							<DataPath>Объект.СтавкаЧас</DataPath>
+							<ContextMenu name="СтавкаЧасКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="СтавкаЧасРасширеннаяПодсказка" id="44"/>
+						</InputField>
+						<InputField name="РазмерАбонплаты" id="45">
+							<DataPath>Объект.РазмерАбонплаты</DataPath>
+							<ContextMenu name="РазмерАбонплатыКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="РазмерАбонплатыРасширеннаяПодсказка" id="47"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

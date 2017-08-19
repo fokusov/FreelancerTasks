@@ -162,7 +162,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Крайний срок</v8:content>
+							<v8:content>Срок</v8:content>
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
@@ -484,102 +484,125 @@
 							<v8:content>Затраты</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>Horizontal</Group>
 					<ExtendedTooltip name="ЗатратыРасширеннаяПодсказка" id="260"/>
 					<ChildItems>
-						<UsualGroup name="Группа4" id="204">
-							<Group>Horizontal</Group>
+						<UsualGroup name="ГруппаЛево" id="204">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="205"/>
+							<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="205"/>
 							<ChildItems>
 								<InputField name="СтоимостьЗадачи" id="46">
 									<DataPath>Объект.СтоимостьЗадачи</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость задачи (руб.)</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="СтоимостьЗадачиКонтекстноеМеню" id="47"/>
 									<ExtendedTooltip name="СтоимостьЗадачиРасширеннаяПодсказка" id="48"/>
 								</InputField>
 								<LabelDecoration name="Декорация1" id="213">
 									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>или</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="Декорация1КонтекстноеМеню" id="214"/>
 									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="215"/>
-								</LabelDecoration>
-								<CheckBoxField name="УчетВремени" id="28">
-									<DataPath>Объект.УчетВремени</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="УчетВремениКонтекстноеМеню" id="29"/>
-									<ExtendedTooltip name="УчетВремениРасширеннаяПодсказка" id="30"/>
-								</CheckBoxField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="Группа5" id="206">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="207"/>
-							<ChildItems>
-								<InputField name="НачалоОтсчетаВремени" id="116">
-									<DataPath>Объект.НачалоОтсчетаВремени</DataPath>
-									<ContextMenu name="НачалоОтсчетаВремениКонтекстноеМеню" id="117"/>
-									<ExtendedTooltip name="НачалоОтсчетаВремениРасширеннаяПодсказка" id="118"/>
-								</InputField>
-								<LabelDecoration name="Декорация4" id="222">
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="Декорация4КонтекстноеМеню" id="223"/>
-									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="224"/>
-								</LabelDecoration>
-								<InputField name="ОкончаниеОтсчетаВремени" id="119">
-									<DataPath>Объект.ОкончаниеОтсчетаВремени</DataPath>
-									<ContextMenu name="ОкончаниеОтсчетаВремениКонтекстноеМеню" id="120"/>
-									<ExtendedTooltip name="ОкончаниеОтсчетаВремениРасширеннаяПодсказка" id="121"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="Группа8" id="261">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="262"/>
-							<ChildItems>
-								<InputField name="ДатаЗавершенияПлан" id="263">
-									<DataPath>Объект.ДатаЗавершенияПлан</DataPath>
-									<ContextMenu name="ДатаЗавершенияПланКонтекстноеМеню" id="264"/>
-									<ExtendedTooltip name="ДатаЗавершенияПланРасширеннаяПодсказка" id="265"/>
-								</InputField>
-								<LabelDecoration name="Декорация6" id="266">
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="Декорация6КонтекстноеМеню" id="267"/>
-									<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="268"/>
-								</LabelDecoration>
-								<InputField name="ДатаЗавершенияФакт" id="253">
-									<DataPath>Объект.ДатаЗавершенияФакт</DataPath>
-									<ContextMenu name="ДатаЗавершенияФактКонтекстноеМеню" id="254"/>
-									<ExtendedTooltip name="ДатаЗавершенияФактРасширеннаяПодсказка" id="255"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="Группа9" id="269">
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="270"/>
-							<ChildItems>
-								<InputField name="ЗатраченоЧасовПлан" id="271">
-									<DataPath>Объект.ЗатраченоЧасовПлан</DataPath>
-									<ContextMenu name="ЗатраченоЧасовПланКонтекстноеМеню" id="272"/>
-									<ExtendedTooltip name="ЗатраченоЧасовПланРасширеннаяПодсказка" id="273"/>
-								</InputField>
-								<LabelDecoration name="Декорация3" id="219">
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="Декорация3КонтекстноеМеню" id="220"/>
-									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="221"/>
 								</LabelDecoration>
 								<InputField name="ЗатраченоЧасовФакт" id="43">
 									<DataPath>Объект.ЗатраченоЧасовФакт</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЗатраченоЧасовФактКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ЗатраченоЧасовФактРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<LabelDecoration name="Декорация4" id="222">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Даты:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="224"/>
+								</LabelDecoration>
+								<InputField name="ДатаЗавершенияФакт" id="253">
+									<DataPath>Объект.ДатаЗавершенияФакт</DataPath>
+									<ContextMenu name="ДатаЗавершенияФактКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="ДатаЗавершенияФактРасширеннаяПодсказка" id="255"/>
+								</InputField>
+								<InputField name="ДатаЗавершенияПлан" id="263">
+									<DataPath>Объект.ДатаЗавершенияПлан</DataPath>
+									<ContextMenu name="ДатаЗавершенияПланКонтекстноеМеню" id="264"/>
+									<ExtendedTooltip name="ДатаЗавершенияПланРасширеннаяПодсказка" id="265"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраво" id="206">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа право</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа право</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="207"/>
+							<ChildItems>
+								<CheckBoxField name="УчетВремени" id="28">
+									<DataPath>Объект.УчетВремени</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вести учет времени</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УчетВремениКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="УчетВремениРасширеннаяПодсказка" id="30"/>
+								</CheckBoxField>
+								<InputField name="НачалоОтсчетаВремени" id="116">
+									<DataPath>Объект.НачалоОтсчетаВремени</DataPath>
+									<ContextMenu name="НачалоОтсчетаВремениКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="НачалоОтсчетаВремениРасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<InputField name="ОкончаниеОтсчетаВремени" id="119">
+									<DataPath>Объект.ОкончаниеОтсчетаВремени</DataPath>
+									<ContextMenu name="ОкончаниеОтсчетаВремениКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ОкончаниеОтсчетаВремениРасширеннаяПодсказка" id="121"/>
+								</InputField>
+								<InputField name="ЗатраченоЧасовПлан" id="271">
+									<DataPath>Объект.ЗатраченоЧасовПлан</DataPath>
+									<ContextMenu name="ЗатраченоЧасовПланКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ЗатраченоЧасовПланРасширеннаяПодсказка" id="273"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
