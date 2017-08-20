@@ -194,6 +194,11 @@
 										</Title>
 										<ExtendedTooltip name="ДеревоКонтекстноеМенюКнопкаУдалитьРасширеннаяПодсказка" id="116"/>
 									</Button>
+									<Button name="ДеревоКонтекстноеМенюЗадачуВТаймер" id="139">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗадачуВТаймер</CommandName>
+										<ExtendedTooltip name="ДеревоКонтекстноеМенюЗадачуВТаймерРасширеннаяПодсказка" id="140"/>
+									</Button>
 								</ChildItems>
 							</ContextMenu>
 							<AutoCommandBar name="ДеревоКоманднаяПанель" id="6">
@@ -342,6 +347,105 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="54"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаСчетчик" id="117">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таймер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа счетчик</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ExtendedTooltip name="ГруппаСчетчикРасширеннаяПодсказка" id="118"/>
+							<ChildItems>
+								<InputField name="ТекЗадачаТаймера" id="136">
+									<DataPath>ТекЗадачаТаймера</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Задача</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекЗадачаТаймераКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ТекЗадачаТаймераРасширеннаяПодсказка" id="138"/>
+								</InputField>
+								<UsualGroup name="Группа1" id="119">
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="120"/>
+									<ChildItems>
+										<InputField name="КолвоЧасов" id="121">
+											<DataPath>КолвоЧасов</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>4</Width>
+											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="КолвоЧасовКонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="КолвоЧасовРасширеннаяПодсказка" id="123"/>
+										</InputField>
+										<InputField name="КолвоМинут" id="124">
+											<DataPath>КолвоМинут</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>4</Width>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=2; ЧДЦ=; ЧВН=</v8:content>
+												</v8:item>
+											</EditFormat>
+											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="КолвоМинутКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="КолвоМинутРасширеннаяПодсказка" id="126"/>
+										</InputField>
+										<InputField name="КолвоСекунд" id="127">
+											<DataPath>КолвоСекунд</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<Width>4</Width>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=2; ЧДЦ=; ЧВН=</v8:content>
+												</v8:item>
+											</EditFormat>
+											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="КолвоСекундКонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="КолвоСекундРасширеннаяПодсказка" id="129"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа2" id="130">
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="131"/>
+									<ChildItems>
+										<Button name="Запуск" id="132">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Запуск</CommandName>
+											<ExtendedTooltip name="ЗапускРасширеннаяПодсказка" id="133"/>
+										</Button>
+										<Button name="Стоп" id="134">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Стоп</CommandName>
+											<ExtendedTooltip name="СтопРасширеннаяПодсказка" id="135"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаДЗ" id="113">
 							<Title>
 								<v8:item>
@@ -355,6 +459,7 @@
 									<v8:content>Группа ДЗ</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
 							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
 							<ExtendedTooltip name="ГруппаДЗРасширеннаяПодсказка" id="114"/>
@@ -414,6 +519,7 @@
 									<ChildItems>
 										<InputField name="врЗадачаОпис" id="58">
 											<DataPath>врЗадачаОпис</DataPath>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
 											<Height>3</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<VerticalStretch>false</VerticalStretch>
@@ -422,9 +528,9 @@
 											<ExtendedTooltip name="врЗадачаОписРасширеннаяПодсказка" id="60"/>
 										</InputField>
 										<Button name="ДобавитьБыструюЗадачу" id="71">
-											<Type>Hyperlink</Type>
-											<HorizontalStretch>true</HorizontalStretch>
-											<VerticalStretch>true</VerticalStretch>
+											<Type>UsualButton</Type>
+											<Height>2</Height>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
 											<CommandName>Form.Command.ДобавитьБыструюЗадачу</CommandName>
 											<ExtendedTooltip name="ДобавитьБыструюЗадачуРасширеннаяПодсказка" id="72"/>
 										</Button>
@@ -544,7 +650,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:DocumentRef.Задача</v8:Type>
+						<v8:Type>cfg:CatalogRef.Задача</v8:Type>
 						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
 					</Type>
 				</Column>
@@ -759,8 +865,8 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:DocumentRef.Задача</v8:Type>
 						<v8:Type>cfg:CatalogRef.СостоянияЗадач</v8:Type>
+						<v8:TypeId>1cf144b6-85cf-4329-bdd5-d6d697c151c9</v8:TypeId>
 					</Type>
 				</Column>
 				<Column name="Наим" id="2">
@@ -779,6 +885,65 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="КолвоМинут" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колво минут</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КолвоСекунд" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колво секунд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КолвоЧасов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колво часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекЗадачаТаймера" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тек задача таймера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Задача</v8:Type>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -968,6 +1133,61 @@
 			</Picture>
 			<Action>ПроверитьПочту</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Запуск" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запуск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Запуск</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Стоп" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Стоп</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗадачуВТаймер" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В таймер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачу в таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗадачуВТаймер</Action>
 		</Command>
 	</Commands>
 </Form>

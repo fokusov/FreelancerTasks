@@ -66,23 +66,6 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Дата" id="16">
-					<DataPath>Список.Date</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<Format>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДФ=dd/MM/yy</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
-				</LabelField>
-				<LabelField name="Номер" id="19">
-					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
-				</LabelField>
 				<LabelField name="ПроектГруппа" id="37">
 					<DataPath>Список.ПроектГруппа</DataPath>
 					<ContextMenu name="ПроектГруппаКонтекстноеМеню" id="38"/>
@@ -130,7 +113,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>Document.Задача</MainTable>
+				<MainTable>Catalog.Задача</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

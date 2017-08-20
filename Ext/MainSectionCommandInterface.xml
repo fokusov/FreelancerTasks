@@ -1,17 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
 	<CommandsVisibility>
-		<Command name="Document.Задача.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="DataProcessor.Канбан.Command.Канбан">
-			<Visibility>
-				<xr:Common>true</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+		<Command name="Catalog.Задача.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
@@ -36,12 +26,17 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Document.Акт.StandardCommand.Create">
+		<Command name="DataProcessor.Канбан.Command.Канбан">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Document.Задача.StandardCommand.Create">
+		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.Акт.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -62,21 +57,18 @@
 			</Visibility>
 		</Command>
 		<Command name="Document.УчетДенег.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Задача.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
 	</CommandsVisibility>
 	<CommandsPlacement>
-		<Command name="Document.Задача.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-			<Placement>Manual</Placement>
-		</Command>
-		<Command name="DataProcessor.Канбан.Command.Канбан">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-			<Placement>Manual</Placement>
-		</Command>
-		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+		<Command name="Catalog.Задача.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
@@ -96,11 +88,15 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
-		<Command name="Document.Акт.StandardCommand.Create">
-			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		<Command name="DataProcessor.Канбан.Command.Канбан">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
-		<Command name="Document.Задача.StandardCommand.Create">
+		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.Акт.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
@@ -117,18 +113,16 @@
 			<Placement>Manual</Placement>
 		</Command>
 		<Command name="Document.УчетДенег.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Задача.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
 	</CommandsPlacement>
 	<CommandsOrder>
-		<Command name="Document.Задача.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="DataProcessor.Канбан.Command.Канбан">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+		<Command name="Catalog.Задача.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Проекты.StandardCommand.OpenList">
@@ -143,10 +137,13 @@
 		<Command name="Report.Взаиморасчеты.Command.Взаиморасчеты">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.Акт.StandardCommand.Create">
-			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		<Command name="DataProcessor.Канбан.Command.Канбан">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.Задача.StandardCommand.Create">
+		<Command name="DataProcessor.Календарь.Command.КомандаОткрытьКалендарь">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.Акт.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 		<Command name="Catalog.Контакты.StandardCommand.Create">
@@ -159,6 +156,9 @@
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 		<Command name="Document.УчетДенег.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.Задача.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 	</CommandsOrder>

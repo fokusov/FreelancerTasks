@@ -24,7 +24,7 @@
 			<ExtendedTooltip name="ВидОперацииДСРасширеннаяПодсказка" id="9"/>
 		</InputField>
 		<InputField name="ДокОснование" id="10">
-			<DataPath>Объект.ДокОснование</DataPath>
+			<DataPath>1/0:1dbacfb9-9539-4033-8830-17418726b235</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ДокОснованиеКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ДокОснованиеРасширеннаяПодсказка" id="12"/>
@@ -101,7 +101,7 @@
 					<ExtendedTooltip name="ЗадачиЗадачаРасширеннаяПодсказка" id="43"/>
 				</InputField>
 				<InputField name="ЗадачиНаименование" id="47">
-					<DataPath>Объект.Задачи.Задача.НаименованиеЗадачи</DataPath>
+					<DataPath>1/0:e481b272-0096-4839-b7e0-0405c16b089d/0:38268a82-312a-4081-b7e3-bb28ada01412/0:53662951-0081-41fc-b77c-8e5a994ceeb0</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="48"/>
 					<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="49"/>

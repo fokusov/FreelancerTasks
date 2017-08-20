@@ -15,10 +15,10 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.Задача</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетЗадачи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Канбан</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Взаиморасчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Задача</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

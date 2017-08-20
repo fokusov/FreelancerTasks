@@ -127,7 +127,7 @@
 					<ExtendedTooltip name="ЗадачиЗадачаРасширеннаяПодсказка" id="46"/>
 				</InputField>
 				<InputField name="ЗадачиНаименование" id="52">
-					<DataPath>Объект.Задачи.Задача.НаименованиеЗадачи</DataPath>
+					<DataPath>1/0:7558af31-fd06-4845-802f-4568bf55149b/0:a2cc2012-1a1d-4c26-b59e-bc69cf494753/0:53662951-0081-41fc-b77c-8e5a994ceeb0</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ЗадачиНаименованиеКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ЗадачиНаименованиеРасширеннаяПодсказка" id="54"/>

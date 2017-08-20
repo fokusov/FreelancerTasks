@@ -167,7 +167,7 @@
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>ЕдиницыИзмерения</Catalog>
 			<Catalog>Контакты</Catalog>
-			<Document>Задача</Document>
+			<Catalog>Задача</Catalog>
 			<Document>УчетДенег</Document>
 			<Document>Акт</Document>
 			<Enum>Периодичность</Enum>
@@ -181,6 +181,7 @@
 			<InformationRegister>ПовторяющиесяЗадачи</InformationRegister>
 			<InformationRegister>Комментарии</InformationRegister>
 			<InformationRegister>История</InformationRegister>
+			<InformationRegister>ПланируемыеСобытия</InformationRegister>
 			<AccumulationRegister>Задачи</AccumulationRegister>
 			<AccumulationRegister>Деньги</AccumulationRegister>
 		</ChildObjects>

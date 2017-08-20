@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
-	<AutoTime>CurrentOrLast</AutoTime>
-	<UsePostingMode>Auto</UsePostingMode>
-	<RepostOnWrite>true</RepostOnWrite>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаРедактировать" id="133">
@@ -16,7 +14,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
-		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="8f42e083-be92-4102-b1f0-fa58452c1a63">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -103,7 +101,7 @@
 			<ExtendedTooltip name="ГруппаОснРасширеннаяПодсказка" id="295"/>
 			<ChildItems>
 				<InputField name="НаименованиеЗадачи" id="10">
-					<DataPath>Объект.НаименованиеЗадачи</DataPath>
+					<DataPath>Объект.Description</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -534,27 +532,23 @@
 									<ContextMenu name="ЗатраченоЧасовФактКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ЗатраченоЧасовФактРасширеннаяПодсказка" id="45"/>
 								</InputField>
-								<LabelDecoration name="Декорация4" id="222">
-									<HorizontalStretch>true</HorizontalStretch>
+								<LabelDecoration name="Декорация3" id="299">
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Даты:</v8:content>
+											<v8:content>или</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="Декорация4КонтекстноеМеню" id="223"/>
-									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="224"/>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="300"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="301"/>
 								</LabelDecoration>
-								<InputField name="ДатаЗавершенияФакт" id="253">
-									<DataPath>Объект.ДатаЗавершенияФакт</DataPath>
-									<ContextMenu name="ДатаЗавершенияФактКонтекстноеМеню" id="254"/>
-									<ExtendedTooltip name="ДатаЗавершенияФактРасширеннаяПодсказка" id="255"/>
-								</InputField>
-								<InputField name="ДатаЗавершенияПлан" id="263">
-									<DataPath>Объект.ДатаЗавершенияПлан</DataPath>
-									<ContextMenu name="ДатаЗавершенияПланКонтекстноеМеню" id="264"/>
-									<ExtendedTooltip name="ДатаЗавершенияПланРасширеннаяПодсказка" id="265"/>
-								</InputField>
+								<CheckBoxField name="БезОплаты" id="302">
+									<DataPath>Объект.БезОплаты</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="БезОплатыКонтекстноеМеню" id="303"/>
+									<ExtendedTooltip name="БезОплатыРасширеннаяПодсказка" id="304"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаПраво" id="206">
@@ -575,30 +569,21 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="207"/>
 							<ChildItems>
-								<CheckBoxField name="УчетВремени" id="28">
-									<DataPath>Объект.УчетВремени</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Вести учет времени</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Right</TitleLocation>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="УчетВремениКонтекстноеМеню" id="29"/>
-									<ExtendedTooltip name="УчетВремениРасширеннаяПодсказка" id="30"/>
-								</CheckBoxField>
-								<InputField name="НачалоОтсчетаВремени" id="116">
-									<DataPath>Объект.НачалоОтсчетаВремени</DataPath>
-									<ContextMenu name="НачалоОтсчетаВремениКонтекстноеМеню" id="117"/>
-									<ExtendedTooltip name="НачалоОтсчетаВремениРасширеннаяПодсказка" id="118"/>
+								<InputField name="ДатаЗавершенияПлан" id="263">
+									<DataPath>Объект.ДатаЗавершенияПлан</DataPath>
+									<ContextMenu name="ДатаЗавершенияПланКонтекстноеМеню" id="264"/>
+									<ExtendedTooltip name="ДатаЗавершенияПланРасширеннаяПодсказка" id="265"/>
 								</InputField>
-								<InputField name="ОкончаниеОтсчетаВремени" id="119">
-									<DataPath>Объект.ОкончаниеОтсчетаВремени</DataPath>
-									<ContextMenu name="ОкончаниеОтсчетаВремениКонтекстноеМеню" id="120"/>
-									<ExtendedTooltip name="ОкончаниеОтсчетаВремениРасширеннаяПодсказка" id="121"/>
+								<InputField name="ДатаЗавершенияФакт" id="253">
+									<DataPath>Объект.ДатаЗавершенияФакт</DataPath>
+									<ContextMenu name="ДатаЗавершенияФактКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="ДатаЗавершенияФактРасширеннаяПодсказка" id="255"/>
 								</InputField>
+								<LabelDecoration name="Декорация4" id="222">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="224"/>
+								</LabelDecoration>
 								<InputField name="ЗатраченоЧасовПлан" id="271">
 									<DataPath>Объект.ЗатраченоЧасовПлан</DataPath>
 									<ContextMenu name="ЗатраченоЧасовПланКонтекстноеМеню" id="272"/>
@@ -641,6 +626,11 @@
 							<Events>
 								<Event name="OnChange">ОтчетныйПериодПриИзменении</Event>
 							</Events>
+						</InputField>
+						<InputField name="ДатаСоздания" id="296">
+							<DataPath>Объект.ДатаСоздания</DataPath>
+							<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="297"/>
+							<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="298"/>
 						</InputField>
 						<InputField name="ДатаИзменения" id="122">
 							<DataPath>Объект.ДатаИзменения</DataPath>
@@ -693,12 +683,12 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DocumentObject.Задача</v8:Type>
+				<v8:Type>cfg:CatalogObject.Задача</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
-				<Field>Объект.RegisterRecords</Field>
+				<Field>Объект.Ref</Field>
 			</UseAlways>
 		</Attribute>
 		<Attribute name="СписокКомментариев" id="2">

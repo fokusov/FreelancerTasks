@@ -22,6 +22,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЕдиницыИзмерения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контакты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроверкаПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПланируемыеСобытия</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
