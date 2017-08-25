@@ -9,10 +9,33 @@
 	<AutoTitle>false</AutoTitle>
 	<ScalingMode>Compact</ScalingMode>
 	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ДобавитьЗадачу" id="33">
+				<Type>CommandBarButton</Type>
+				<Width>20</Width>
+				<CommandName>Form.Command.ДобавитьЗадачу</CommandName>
+				<BackColor>style:ЖелтыйС1</BackColor>
+				<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<ExtendedTooltip name="ДобавитьЗадачуРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="ОбновитьСписок" id="31">
+				<Type>CommandBarButton</Type>
+				<Width>3</Width>
+				<CommandName>Form.Command.ОбновитьСписок</CommandName>
+				<ExtendedTooltip name="ОбновитьСписокРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаКнопкаПочта" id="150">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьПочту</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаПочтаРасширеннаяПодсказка" id="151"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -70,54 +93,6 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="30"/>
 							<ChildItems>
-								<Button name="ДобавитьЗадачу" id="33">
-									<Type>UsualButton</Type>
-									<Width>20</Width>
-									<CommandName>Form.Command.ДобавитьЗадачу</CommandName>
-									<BackColor>style:ЖелтыйС1</BackColor>
-									<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<ExtendedTooltip name="ДобавитьЗадачуРасширеннаяПодсказка" id="34"/>
-								</Button>
-								<Button name="ОткрытьЗадачу" id="41">
-									<Type>UsualButton</Type>
-									<Visible>false</Visible>
-									<Width>3</Width>
-									<CommandName>Form.Command.ОткрытьЗадачу</CommandName>
-									<ExtendedTooltip name="ОткрытьЗадачуРасширеннаяПодсказка" id="42"/>
-								</Button>
-								<Button name="ОбновитьСписок" id="31">
-									<Type>UsualButton</Type>
-									<Width>3</Width>
-									<CommandName>Form.Command.ОбновитьСписок</CommandName>
-									<ExtendedTooltip name="ОбновитьСписокРасширеннаяПодсказка" id="32"/>
-								</Button>
-								<Button name="ПроверитьПочту" id="75">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПроверитьПочту</CommandName>
-									<ExtendedTooltip name="ПроверитьПочтуРасширеннаяПодсказка" id="76"/>
-								</Button>
-								<CheckBoxField name="ВыводитьЗавершенные" id="77">
-									<DataPath>ВыводитьЗавершенные</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Завершенные</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ВыводитьЗавершенныеКонтекстноеМеню" id="78"/>
-									<ExtendedTooltip name="ВыводитьЗавершенныеРасширеннаяПодсказка" id="79"/>
-									<Events>
-										<Event name="OnChange">ВыводитьЗавершенныеПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<Button name="УдалитьЗадачу" id="73">
-									<Type>UsualButton</Type>
-									<Visible>false</Visible>
-									<CommandName>Form.Command.УдалитьЗадачу</CommandName>
-									<ExtendedTooltip name="УдалитьЗадачуРасширеннаяПодсказка" id="74"/>
-								</Button>
 								<UsualGroup name="Фильтр" id="89">
 									<Title>
 										<v8:item>
@@ -137,6 +112,7 @@
 									<ChildItems>
 										<InputField name="Проект" id="1">
 											<DataPath>Проект</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="ПроектКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="3"/>
@@ -146,6 +122,7 @@
 										</InputField>
 										<InputField name="ДатаЗапроса" id="46">
 											<DataPath>ДатаЗапроса</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="ДатаЗапросаКонтекстноеМеню" id="47"/>
 											<ExtendedTooltip name="ДатаЗапросаРасширеннаяПодсказка" id="48"/>
@@ -153,12 +130,30 @@
 												<Event name="OnChange">ДатаЗапросаПриИзменении</Event>
 											</Events>
 										</InputField>
+										<CheckBoxField name="ВыводитьЗавершенные" id="77">
+											<DataPath>ВыводитьЗавершенные</DataPath>
+											<SkipOnInput>true</SkipOnInput>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Завершенные</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыводитьЗавершенныеКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ВыводитьЗавершенныеРасширеннаяПодсказка" id="79"/>
+											<Events>
+												<Event name="OnChange">ВыводитьЗавершенныеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Дерево" id="4">
 							<Representation>Tree</Representation>
+							<DefaultItem>true</DefaultItem>
 							<SelectionMode>SingleRow</SelectionMode>
 							<InitialTreeView>ExpandAllLevels</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -271,6 +266,7 @@
 								<InputField name="ДеревоСтатус" id="43">
 									<DataPath>Дерево.Статус</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
 									<MaxWidth>15</MaxWidth>
 									<ContextMenu name="ДеревоСтатусКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ДеревоСтатусРасширеннаяПодсказка" id="45"/>
@@ -300,30 +296,26 @@
 									<ContextMenu name="ДеревоСрокЗадачиКонтекстноеМеню" id="27"/>
 									<ExtendedTooltip name="ДеревоСрокЗадачиРасширеннаяПодсказка" id="28"/>
 								</InputField>
+								<InputField name="ДеревоЗаказчик" id="152">
+									<DataPath>Дерево.Заказчик</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>10</Width>
+									<ContextMenu name="ДеревоЗаказчикКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ДеревоЗаказчикРасширеннаяПодсказка" id="154"/>
+								</InputField>
 								<InputField name="ДеревоОтветственный" id="23">
 									<DataPath>Дерево.Ответственный</DataPath>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоОтветственныйКонтекстноеМеню" id="24"/>
-									<ExtendedTooltip name="ДеревоОтветственныйРасширеннаяПодсказка" id="25"/>
-								</InputField>
-								<InputField name="ДеревоПланВремя" id="38">
-									<DataPath>Дерево.ПланВремя</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content> </v8:content>
+											<v8:content>Исполнитель</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>3</Width>
-									<ContextMenu name="ДеревоПланВремяКонтекстноеМеню" id="39"/>
-									<ExtendedTooltip name="ДеревоПланВремяРасширеннаяПодсказка" id="40"/>
+									<Width>10</Width>
+									<ContextMenu name="ДеревоОтветственныйКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДеревоОтветственныйРасширеннаяПодсказка" id="25"/>
 								</InputField>
 								<InputField name="ДеревоСтоимость" id="83">
 									<DataPath>Дерево.Стоимость</DataPath>
@@ -362,67 +354,103 @@
 							</ToolTip>
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<Group>Vertical</Group>
-							<Behavior>Collapsible</Behavior>
 							<Collapsed>true</Collapsed>
 							<ExtendedTooltip name="ГруппаСчетчикРасширеннаяПодсказка" id="118"/>
 							<ChildItems>
 								<InputField name="ТекЗадачаТаймера" id="136">
 									<DataPath>ТекЗадачаТаймера</DataPath>
+									<SkipOnInput>true</SkipOnInput>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Задача</v8:content>
 										</v8:item>
 									</Title>
+									<ClearButton>true</ClearButton>
 									<ContextMenu name="ТекЗадачаТаймераКонтекстноеМеню" id="137"/>
 									<ExtendedTooltip name="ТекЗадачаТаймераРасширеннаяПодсказка" id="138"/>
+									<Events>
+										<Event name="OnChange">ТекЗадачаТаймераПриИзменении</Event>
+										<Event name="Clearing">ТекЗадачаТаймераОчистка</Event>
+									</Events>
 								</InputField>
 								<UsualGroup name="Группа1" id="119">
 									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 									<Group>Horizontal</Group>
-									<Representation>None</Representation>
+									<Representation>NormalSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="120"/>
 									<ChildItems>
-										<InputField name="КолвоЧасов" id="121">
+										<LabelField name="КолвоЧасов" id="121">
 											<DataPath>КолвоЧасов</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
-											<Width>4</Width>
-											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Width>6</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=3; ЧДЦ=; ЧН=00</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" height="28" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="КолвоЧасовКонтекстноеМеню" id="122"/>
 											<ExtendedTooltip name="КолвоЧасовРасширеннаяПодсказка" id="123"/>
-										</InputField>
-										<InputField name="КолвоМинут" id="124">
+										</LabelField>
+										<LabelDecoration name="Декорация1" id="141">
+											<Font height="28" kind="AutoFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="142"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="143"/>
+										</LabelDecoration>
+										<LabelField name="КолвоМинут" id="124">
 											<DataPath>КолвоМинут</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
-											<Width>4</Width>
-											<EditFormat>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Width>6</Width>
+											<Format>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=2; ЧДЦ=; ЧВН=</v8:content>
+													<v8:content>ЧЦ=2; ЧДЦ=; ЧН=00; ЧВН=</v8:content>
 												</v8:item>
-											</EditFormat>
-											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											</Format>
+											<Font ref="style:NormalTextFont" height="28" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="КолвоМинутКонтекстноеМеню" id="125"/>
 											<ExtendedTooltip name="КолвоМинутРасширеннаяПодсказка" id="126"/>
-										</InputField>
-										<InputField name="КолвоСекунд" id="127">
+										</LabelField>
+										<LabelDecoration name="Декорация2" id="144">
+											<Font height="28" kind="AutoFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="145"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="146"/>
+										</LabelDecoration>
+										<LabelField name="КолвоСекунд" id="127">
 											<DataPath>КолвоСекунд</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
-											<Width>4</Width>
-											<EditFormat>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Width>6</Width>
+											<Format>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=2; ЧДЦ=; ЧВН=</v8:content>
+													<v8:content>ЧЦ=2; ЧДЦ=; ЧН=00; ЧВН=</v8:content>
 												</v8:item>
-											</EditFormat>
-											<Font ref="style:NormalTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											</Format>
+											<Font ref="style:NormalTextFont" height="28" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="КолвоСекундКонтекстноеМеню" id="128"/>
 											<ExtendedTooltip name="КолвоСекундРасширеннаяПодсказка" id="129"/>
-										</InputField>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="Группа2" id="130">
@@ -434,11 +462,18 @@
 									<ChildItems>
 										<Button name="Запуск" id="132">
 											<Type>UsualButton</Type>
+											<SkipOnInput>true</SkipOnInput>
 											<CommandName>Form.Command.Запуск</CommandName>
 											<ExtendedTooltip name="ЗапускРасширеннаяПодсказка" id="133"/>
 										</Button>
+										<LabelDecoration name="Декорация3" id="147">
+											<Width>1</Width>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="148"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="149"/>
+										</LabelDecoration>
 										<Button name="Стоп" id="134">
 											<Type>UsualButton</Type>
+											<SkipOnInput>true</SkipOnInput>
 											<CommandName>Form.Command.Стоп</CommandName>
 											<ExtendedTooltip name="СтопРасширеннаяПодсказка" id="135"/>
 										</Button>
@@ -447,6 +482,7 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаДЗ" id="113">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -538,71 +574,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<Table name="ДеревоСтатусов" id="94">
-							<Representation>Tree</Representation>
-							<Visible>false</Visible>
-							<TitleLocation>Top</TitleLocation>
-							<ReadOnly>true</ReadOnly>
-							<RowSelectionMode>Row</RowSelectionMode>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<InitialTreeView>ExpandAllLevels</InitialTreeView>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>ДеревоСтатусов</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Задачи по статусам</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДеревоСтатусовКонтекстноеМеню" id="95"/>
-							<AutoCommandBar name="ДеревоСтатусовКоманднаяПанель" id="96">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ДеревоСтатусовРасширеннаяПодсказка" id="97"/>
-							<SearchStringAddition name="ДеревоСтатусовСтрокаПоиска" id="98">
-								<AdditionSource>
-									<Item>ДеревоСтатусов</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоСтатусовСтрокаПоискаКонтекстноеМеню" id="99"/>
-								<ExtendedTooltip name="ДеревоСтатусовСтрокаПоискаРасширеннаяПодсказка" id="100"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ДеревоСтатусовСостояниеПросмотра" id="101">
-								<AdditionSource>
-									<Item>ДеревоСтатусов</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоСтатусовСостояниеПросмотраКонтекстноеМеню" id="102"/>
-								<ExtendedTooltip name="ДеревоСтатусовСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ДеревоСтатусовУправлениеПоиском" id="104">
-								<AdditionSource>
-									<Item>ДеревоСтатусов</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоСтатусовУправлениеПоискомКонтекстноеМеню" id="105"/>
-								<ExtendedTooltip name="ДеревоСтатусовУправлениеПоискомРасширеннаяПодсказка" id="106"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="Selection">ДеревоСтатусовВыбор</Event>
-							</Events>
-							<ChildItems>
-								<InputField name="ДеревоСтатусовЗадача" id="107">
-									<DataPath>ДеревоСтатусов.Задача</DataPath>
-									<Visible>false</Visible>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоСтатусовЗадачаКонтекстноеМеню" id="108"/>
-									<ExtendedTooltip name="ДеревоСтатусовЗадачаРасширеннаяПодсказка" id="109"/>
-								</InputField>
-								<InputField name="ДеревоСтатусовНаим" id="110">
-									<DataPath>ДеревоСтатусов.Наим</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоСтатусовНаимКонтекстноеМеню" id="111"/>
-									<ExtendedTooltip name="ДеревоСтатусовНаимРасширеннаяПодсказка" id="112"/>
-								</InputField>
-							</ChildItems>
-						</Table>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -767,6 +738,17 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="Заказчик" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контакты</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ДатаЗапроса" id="4">
@@ -845,46 +827,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-		</Attribute>
-		<Attribute name="ДеревоСтатусов" id="10">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дерево статусов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTree</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="Задача" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Задача</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.СостоянияЗадач</v8:Type>
-						<v8:TypeId>1cf144b6-85cf-4329-bdd5-d6d697c151c9</v8:TypeId>
-					</Type>
-				</Column>
-				<Column name="Наим" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Задача</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-			</Columns>
 		</Attribute>
 		<Attribute name="КолвоМинут" id="11">
 			<Title>
@@ -1054,26 +996,6 @@
 			<Action>ДобавитьЗадачу</Action>
 			<Representation>Text</Representation>
 		</Command>
-		<Command name="ОткрытьЗадачу" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть задачу</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть задачу</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Change</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ОткрытьЗадачу</Action>
-			<Representation>Picture</Representation>
-		</Command>
 		<Command name="ДобавитьБыструюЗадачу" id="4">
 			<Title>
 				<v8:item>
@@ -1127,18 +1049,13 @@
 					<v8:content>Проверить почту</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.GeographicalSchema</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>ПроверитьПочту</Action>
-			<Representation>Picture</Representation>
 		</Command>
 		<Command name="Запуск" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запуск</v8:content>
+					<v8:content>Пуск</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1148,11 +1065,10 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:Ref>CommonPicture.Play</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Запуск</Action>
-			<Representation>Picture</Representation>
 		</Command>
 		<Command name="Стоп" id="8">
 			<Title>
@@ -1168,11 +1084,10 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:Ref>CommonPicture.Stop2</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Стоп</Action>
-			<Representation>Picture</Representation>
 		</Command>
 		<Command name="ЗадачуВТаймер" id="9">
 			<Title>
@@ -1187,6 +1102,10 @@
 					<v8:content>Задачу в таймер</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ЗадачуВТаймер</Action>
 		</Command>
 	</Commands>

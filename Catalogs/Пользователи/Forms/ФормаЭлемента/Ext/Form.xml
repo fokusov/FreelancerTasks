@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="telegram" id="4">
+			<DataPath>Объект.telegram</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ник в telegram</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="telegramКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="telegramРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ПочтовыйЯщикДляЗадач" id="7">
+			<DataPath>Объект.ПочтовыйПрофиль</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПочтовыйЯщикДляЗадачКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПочтовыйЯщикДляЗадачРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="Контакты" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Контакты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтактыКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="КонтактыКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="КонтактыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="КонтактыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="КонтактыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтактыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="КонтактыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтактыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Контакты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="КонтактыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="КонтактыТипКонтакта" id="23">
+					<DataPath>Объект.Контакты.ТипКонтакта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактыТипКонтактаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КонтактыТипКонтактаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="КонтактыКонтакт" id="26">
+					<DataPath>Объект.Контакты.Контакт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактыКонтактКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КонтактыКонтактРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="КонтактыУведомлять" id="29">
+					<DataPath>Объект.Контакты.Уведомлять</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КонтактыУведомлятьКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КонтактыУведомлятьРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Пользователи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

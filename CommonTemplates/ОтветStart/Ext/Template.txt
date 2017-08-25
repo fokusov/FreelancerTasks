@@ -1,0 +1,5 @@
+﻿/start - вывод списка команд
+/wt - погода
+/time - время на сервере
+/hello - Привет, %username%!
+/takeMyMoney - Фото

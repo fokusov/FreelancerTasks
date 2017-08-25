@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.4">
+	<Item id="9ce29d77-b788-4d6c-9e3d-529e3c3e7983">
+		<Name>Бухгалтерия_2_0</Name>
+		<Code>Accounting</Code>
+		<Description>Бухгалтерия 2.0</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7611179a-1714-4ef8-b44b-c82c2237eb88">
+		<Name>Бухгалтерия_3_0</Name>
+		<Code>Accounting</Code>
+		<Description>Бухгалтерия 3.0</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8388df4f-2615-43c3-b20c-65a55ad4b315">
+		<Name>Бухгалтерия77</Name>
+		<Code>BU42TK</Code>
+		<Description>Бухгалтерия 7.7 Общая</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f31c5b25-0b93-4510-9bed-5325ddb196e8">
+		<Name>Бухгалтерия77УСН</Name>
+		<Code>BASUOR</Code>
+		<Description>Бухгалтерия 7.7 УСН</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="40f03921-1e3a-498f-ba09-d504e6bc70ab">
+		<Name>ЗиК</Name>
+		<Code>R2CLKTK</Code>
+		<Description>Зарплата и Кадры 7.7</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="b715eb4f-9d14-4e9d-a5f2-7489d9e5abb0">
+		<Name>ЗУП</Name>
+		<Code>HRM</Code>
+		<Description>Зарплата и управление персоналом</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e76c4f6f-b82e-469f-b804-4e884c684501">
+		<Name>Компл77</Name>
+		<Code>BUOUSL</Code>
+		<Description>Комплексная конфигурация 7.7</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fa6eb38b-9781-482b-a49f-42f85a74ed35">
+		<Name>ТиС</Name>
+		<Code>OUTK</Code>
+		<Description>Торговля и Склад 7.7</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="dfcb667c-4c60-4b29-9ebd-62946ec3fbbf">
+		<Name>УПП</Name>
+		<Code>Enterprise</Code>
+		<Description>УПП 1.3</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f0fcf3a3-7396-4c2a-bbbf-1196b68cc8cc">
+		<Name>УТ10</Name>
+		<Code>Trade</Code>
+		<Description>Управление торговлей 10</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="371851af-0c0c-40ba-b31d-6b4597f5589b">
+		<Name>УТ11</Name>
+		<Code>Trade</Code>
+		<Description>Управление торговлей 11</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

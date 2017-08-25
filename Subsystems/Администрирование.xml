@@ -23,6 +23,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контакты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроверкаПочты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПланируемыеСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.telegram</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

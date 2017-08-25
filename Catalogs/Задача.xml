@@ -764,11 +764,11 @@
 			</Attribute>
 			<Attribute uuid="d558dcfa-0d01-48ba-b216-6fcf1033ef2e">
 				<Properties>
-					<Name>ИдПисьма</Name>
+					<Name>ИдЗадачи</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ИД письма</v8:content>
+							<v8:content>Внешний ИД</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

@@ -155,12 +155,24 @@
 									<ContextMenu name="КонтактыКонтактКонтекстноеМеню" id="24"/>
 									<ExtendedTooltip name="КонтактыКонтактРасширеннаяПодсказка" id="25"/>
 								</InputField>
-								<InputField name="КонтактыТел" id="26">
-									<DataPath>Объект.Контакты.Контакт.ТелефонМобильный</DataPath>
+								<InputField name="КонтактыКонтактТел" id="26">
+									<DataPath>Объект.Контакты.Контакт.Телефон</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КонтактыТелКонтекстноеМеню" id="27"/>
-									<ExtendedTooltip name="КонтактыТелРасширеннаяПодсказка" id="28"/>
+									<ContextMenu name="КонтактыКонтактТелКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="КонтактыКонтактТелРасширеннаяПодсказка" id="28"/>
 								</InputField>
+								<LabelField name="КонтактыКонтактЭлПочта" id="48">
+									<DataPath>Объект.Контакты.Контакт.ЭлПочта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактыКонтактЭлПочтаКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="КонтактыКонтактЭлПочтаРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<LabelField name="КонтактыКонтактtelegram" id="51">
+									<DataPath>Объект.Контакты.Контакт.telegram</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактыКонтактtelegramКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="КонтактыКонтактtelegramРасширеннаяПодсказка" id="53"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
